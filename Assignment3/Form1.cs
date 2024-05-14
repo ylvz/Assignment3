@@ -9,6 +9,7 @@ namespace Assignment3
         public Form1()
         {
             InitializeComponent();
+            int storageSize = 20;
         }
     }
 }

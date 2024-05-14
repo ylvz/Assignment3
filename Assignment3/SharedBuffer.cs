@@ -15,5 +15,27 @@ namespace Assignment3
         private int outPos;
         private int bufferCount;
 
+        Semaphore producerSem, consumerSem;
+        Mutex mutex;
+
+        public SharedBuffer(ProgressBar progressBar,Label lblItems,int storageSize)
+        {
+            this.progressBar = progressBar;
+            buffer = new Product[storageSize];
+
+            progressBar.Maximum = storageSize;
+            this.lblBufferItems = lblItems;
+
+            producerSem = new Semaphore(storageSize, storageSize);
+            consumerSem = new Semaphore(0, storageSize);
+            mutex = new Mutex();
+        }
+
+        public void Produce(Product product)
+        {
+            progressBar.Invoke((MethodInvoker)(()=>progressBar.Value=bufferCount));
+            lblBufferItems.Invoke((MethodInvoker)(()=>lblBufferItems.Text=bufferCount.ToString()));
+        }
+
     }
 }
