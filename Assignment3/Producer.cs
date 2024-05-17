@@ -14,16 +14,16 @@ namespace Assignment3
     public class Producer
     {
         Product.CategoryType producerType;
-        Storage<Product> storage;
-        LogisticManager logisticManager;
+        LogisticsBuffer<Product> storage;
+        LogisticManager manager;
         bool isRunning = true;
         public bool IsRunning { get { return isRunning; } set { isRunning = value; } }
 
-        public Producer(Product.CategoryType producerType, Storage<Product> storage, LogisticManager logisticManager)
+        public Producer(Product.CategoryType producerType, LogisticsBuffer<Product> storage, LogisticManager logisticManager)
         {
             this.producerType = producerType;
             this.storage = storage;
-            this.logisticManager = logisticManager;
+            this.manager = logisticManager;
         }
 
         public void Run()
@@ -34,10 +34,10 @@ namespace Assignment3
                 {
                     continue;
                 }
-                if (logisticManager.products.Count != 0)
+                if (manager.products.Count != 0)
                 {
                     Product randomProduct = GetRandomProduct();
-                    storage.Produce(randomProduct); //Runs the produce method of the Storage class to add products to the Storage
+                    storage.AddProduct(randomProduct); //Runs the produce method of the Storage class to add products to the Storage
                     Thread.Sleep(1000);
                 }
             }
@@ -47,11 +47,11 @@ namespace Assignment3
         public Product GetRandomProduct()
         {
             Random random = new Random();
-            List<Product> matchingProducts =
-            logisticManager.products.Where(product => product.Type == this.producerType).ToList();
-            int index = random.Next(0, matchingProducts.Count);
-            Product validProduct = matchingProducts[index];
-            return validProduct;
+            List<Product> matchProducts =
+            manager.products.Where(product => product.Type == this.producerType).ToList();
+            int index = random.Next(0, matchProducts.Count);
+            Product rightProduct = matchProducts[index];
+            return rightProduct;
         }
 
 

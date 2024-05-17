@@ -15,13 +15,12 @@ namespace Assignment3
     /// </summary>
     public class LogisticManager
     {
-        public Storage<Product> Storage { get; set; } = new Storage<Product>();
+        public LogisticsBuffer<Product> buffer { get; set; } = new LogisticsBuffer<Product>();
         public List<Product> products = new List<Product>();
         private Dictionary<Product.CategoryType, Producer> producers = new Dictionary<Product.CategoryType, Producer>();
         private Dictionary<Product.CategoryType, Consumer> consumers = new Dictionary<Product.CategoryType, Consumer>();
         public Form1 mainForm;
         bool isRunning = true;
-        public bool IsRunning { get { return isRunning; } }
 
         public Thread managerThread;
         private string[] testProducts;
@@ -74,10 +73,10 @@ namespace Assignment3
             AddTestProducts();
             while (isRunning)
             {
-                UpdateTrixieListBox();
-                UpdateRoyalCaninListBox();
+                UpdateBitibaListBox();
+                UpdateArkenZooListBox();
                 UpdateVetZooListBox();
-                UpdateProgressBar(Storage.ElementsInBuffer);
+                UpdateProgressBar(buffer.ProductsCount);
                 Thread.Sleep(1000);
             }
         }
@@ -91,16 +90,16 @@ namespace Assignment3
 
         public void CreateProducers()
         {
-            producers[Product.CategoryType.Food] = new Producer(Product.CategoryType.Food, Storage, this);
-            producers[Product.CategoryType.Toys] = new Producer(Product.CategoryType.Toys, Storage, this);
-            producers[Product.CategoryType.Accessories] = new Producer(Product.CategoryType.Accessories, Storage, this);
+            producers[Product.CategoryType.Food] = new Producer(Product.CategoryType.Food, buffer, this);
+            producers[Product.CategoryType.Toys] = new Producer(Product.CategoryType.Toys, buffer, this);
+            producers[Product.CategoryType.Accessories] = new Producer(Product.CategoryType.Accessories, buffer, this);
         }
 
         public void CreateConsumers()
         {
-            consumers[Product.CategoryType.Food] = new Consumer(Product.CategoryType.Food, Storage, 15, this);
-            consumers[Product.CategoryType.Toys] = new Consumer(Product.CategoryType.Toys, Storage, 10, this);
-            consumers[Product.CategoryType.Accessories] = new Consumer(Product.CategoryType.Accessories, Storage, 8, this);
+            consumers[Product.CategoryType.Food] = new Consumer(Product.CategoryType.Food, buffer, 15, this);
+            consumers[Product.CategoryType.Toys] = new Consumer(Product.CategoryType.Toys, buffer, 10, this);
+            consumers[Product.CategoryType.Accessories] = new Consumer(Product.CategoryType.Accessories, buffer, 8, this);
         }
 
         #region Methods to start and stop consumers and producers
@@ -146,41 +145,39 @@ namespace Assignment3
         }
 
         #region Methods to Update ListBoxes
-        public void UpdateTrixieListBox()
+        public void UpdateBitibaListBox()
         {
-            string[] infoStrings = GetTrixieInfoStrings();
-            if (mainForm.TrixieListBox.InvokeRequired)
+            if (mainForm.BitibaListBox.InvokeRequired)
             {
-                mainForm.TrixieListBox.Invoke(new Action(UpdateTrixieListBox));
+                mainForm.BitibaListBox.Invoke(new Action(UpdateBitibaListBox));
             }
             else
             {
-                ClearTrixieListBox();
-                foreach (string infoString in infoStrings)
+                ClearBitibaListBox();
+                foreach (string infoString in GetBitibaInfoStrings())
                 {
-                    mainForm.UpdateTrixieProducts(infoString);
+                    mainForm.UpdateBitibaProducts(infoString);
                 }
             }
         }
-        public void UpdateRoyalCaninListBox()
+
+        public void UpdateArkenZooListBox()
         {
-            string[] infoStrings = GetRoyalCaninInfoStrings();
-            if (mainForm.RoyalCaninListBox.InvokeRequired)
+            if (mainForm.ArkenZooListBox.InvokeRequired)
             {
-                mainForm.RoyalCaninListBox.Invoke(new Action(UpdateRoyalCaninListBox));
+                mainForm.ArkenZooListBox.Invoke(new Action(UpdateArkenZooListBox));
             }
             else
             {
-                ClearRoyalCaninListBox();
-                foreach (string infoString in infoStrings)
+                ClearArkenZooListBox();
+                foreach (string infoString in GetArkenZooInfoStrings())
                 {
-                    mainForm.UpdateRoyalCaninProducts(infoString);
+                    mainForm.UpdateArkenZooProducts(infoString);
                 }
             }
         }
         public void UpdateVetZooListBox()
         {
-            string[] infoStrings = GetVetZooInfoStrings();
             if (mainForm.VetZooListbox.InvokeRequired)
             {
                 mainForm.VetZooListbox.Invoke(new Action(UpdateVetZooListBox));
@@ -188,7 +185,7 @@ namespace Assignment3
             else
             {
                 ClearVetZooListBox();
-                foreach (string infoString in infoStrings)
+                foreach (string infoString in GetVetZooInfoStrings())
                 {
                     mainForm.UpdateVetZooProducts(infoString);
                 }
@@ -197,13 +194,13 @@ namespace Assignment3
         #endregion
 
         #region Methods to clear ListBoxes
-        private void ClearTrixieListBox()
+        private void ClearBitibaListBox()
         {
-            mainForm.TrixieListBox.Items.Clear();
+            mainForm.BitibaListBox.Items.Clear();
         }
-        private void ClearRoyalCaninListBox()
+        private void ClearArkenZooListBox()
         {
-            mainForm.RoyalCaninListBox.Items.Clear();
+            mainForm.ArkenZooListBox.Items.Clear();
         }
         private void ClearVetZooListBox()
         {
@@ -212,58 +209,38 @@ namespace Assignment3
         #endregion
 
         #region Methods to get product information as strings
-        private string[] GetTrixieInfoStrings()
+        private string[] GetConsumerInfoStrings(Product.CategoryType consumerType)
         {
-            if (consumers[Product.CategoryType.Toys].loadedProducts.Count == 0)
+            var loadedProducts = consumers[consumerType].loadedProducts;
+            if (loadedProducts.Count == 0)
             {
-                return new string[] { ConstStrings.EMPTY };
+                return new string[] { Strings.EMPTY };
             }
-            string[] infoStrings = new string[consumers[Product.CategoryType.Toys].loadedProducts.Count + 1];
+            string[] infoStrings = new string[loadedProducts.Count + 1];
 
-            infoStrings[0] = ConstStrings.PRODUCTS_LOADED +
-                $"{consumers[Product.CategoryType.Toys].loadedProducts.Count}";
+            infoStrings[0] = Strings.PRODUCTS_LOADED +
+                $"{loadedProducts.Count}";
 
-            for (int i = 0; i < consumers[Product.CategoryType.Toys].loadedProducts.Count; i++)
+            for (int i = 0; i < loadedProducts.Count; i++)
             {
-                infoStrings[i + 1] = consumers[Product.CategoryType.Toys].loadedProducts[i].ToString();
+                infoStrings[i + 1] = loadedProducts[i].ToString();
             }
             return infoStrings;
         }
 
-        private string[] GetRoyalCaninInfoStrings()
+        private string[] GetBitibaInfoStrings()
         {
-            if (consumers[Product.CategoryType.Food].loadedProducts.Count == 0)
-            {
-                return new string[] { ConstStrings.EMPTY };
-            }
-            string[] infoStrings = new string[consumers[Product.CategoryType.Food].loadedProducts.Count + 1];
+            return GetConsumerInfoStrings(Product.CategoryType.Toys);
+        }
 
-            infoStrings[0] = ConstStrings.PRODUCTS_LOADED +
-                $"{consumers[Product.CategoryType.Food].loadedProducts.Count}";
-
-            for (int i = 0; i < consumers[Product.CategoryType.Food].loadedProducts.Count; i++)
-            {
-                infoStrings[i + 1] = consumers[Product.CategoryType.Food].loadedProducts[i].ToString();
-            }
-            return infoStrings;
+        private string[] GetArkenZooInfoStrings()
+        {
+            return GetConsumerInfoStrings(Product.CategoryType.Food);
         }
 
         private string[] GetVetZooInfoStrings()
         {
-            if (consumers[Product.CategoryType.Accessories].loadedProducts.Count == 0)
-            {
-                return new string[] { ConstStrings.EMPTY };
-            }
-            string[] infoStrings = new string[consumers[Product.CategoryType.Accessories].loadedProducts.Count + 1];
-
-            infoStrings[0] = ConstStrings.PRODUCTS_LOADED +
-                $"{consumers[Product.CategoryType.Accessories].loadedProducts.Count}";
-
-            for (int i = 0; i < consumers[Product.CategoryType.Accessories].loadedProducts.Count; i++)
-            {
-                infoStrings[i + 1] = consumers[Product.CategoryType.Accessories].loadedProducts[i].ToString();
-            }
-            return infoStrings;
+            return GetConsumerInfoStrings(Product.CategoryType.Accessories);
         }
         #endregion
     }

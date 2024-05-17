@@ -30,7 +30,7 @@ namespace Assignment3
         public CategoryType Type { get { return type; } set { type = value; } }
         public override string ToString()
         {
-            return $"Name: {name}, Price: {price}";
+            return $"Product: {name}, Price: {price}€";
         }
     }
 }

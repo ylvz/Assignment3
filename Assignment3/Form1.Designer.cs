@@ -31,21 +31,21 @@ namespace Assignment3
         private void InitializeComponent()
         {
             this.producerSectionBox = new System.Windows.Forms.GroupBox();
-            this.bOSCHBox = new System.Windows.Forms.GroupBox();
-            this.bOSCHStopBtn = new System.Windows.Forms.Button();
-            this.bOSCHStartBtn = new System.Windows.Forms.Button();
-            this.bOSCHStatus = new System.Windows.Forms.Label();
-            this.bOSCHStatusLabel = new System.Windows.Forms.Label();
-            this.razerBox = new System.Windows.Forms.GroupBox();
-            this.razerStopBtn = new System.Windows.Forms.Button();
-            this.razerStartBtn = new System.Windows.Forms.Button();
-            this.razerStatus = new System.Windows.Forms.Label();
-            this.razerStatusLabel = new System.Windows.Forms.Label();
-            this.lantmannenBox = new System.Windows.Forms.GroupBox();
-            this.lantmannenStopBtn = new System.Windows.Forms.Button();
-            this.lantmannenStartBtn = new System.Windows.Forms.Button();
-            this.lantmannenStatus = new System.Windows.Forms.Label();
-            this.lantmannenStatusLabel = new System.Windows.Forms.Label();
+            this.hurttaBox = new System.Windows.Forms.GroupBox();
+            this.hurttaStopBtn = new System.Windows.Forms.Button();
+            this.hurttaStartBtn = new System.Windows.Forms.Button();
+            this.hurttaStatus = new System.Windows.Forms.Label();
+            this.hurttaStatusLabel = new System.Windows.Forms.Label();
+            this.trixieBox = new System.Windows.Forms.GroupBox();
+            this.trixieStopBtn = new System.Windows.Forms.Button();
+            this.trixieStartBtn = new System.Windows.Forms.Button();
+            this.trixieStatus = new System.Windows.Forms.Label();
+            this.trixieStatusLabel = new System.Windows.Forms.Label();
+            this.royalCaninnBox = new System.Windows.Forms.GroupBox();
+            this.royalCaninStopBtn = new System.Windows.Forms.Button();
+            this.royalCaninStartBtn = new System.Windows.Forms.Button();
+            this.royalCaninStatus = new System.Windows.Forms.Label();
+            this.royalCaninStatusLabel = new System.Windows.Forms.Label();
             this.consumerSectionBox = new System.Windows.Forms.GroupBox();
             this.vetZooBox = new System.Windows.Forms.GroupBox();
             this.vetZooListbox = new System.Windows.Forms.ListBox();
@@ -54,20 +54,20 @@ namespace Assignment3
             this.vetZooCheckbox = new System.Windows.Forms.CheckBox();
             this.vetZooStatusLabel = new System.Windows.Forms.Label();
             this.vetZooStatus = new System.Windows.Forms.Label();
-            this.trixieBox = new System.Windows.Forms.GroupBox();
-            this.trixieListBox = new System.Windows.Forms.ListBox();
-            this.trixieStopBtn = new System.Windows.Forms.Button();
-            this.trixieStartBtn = new System.Windows.Forms.Button();
-            this.trixieCheckbox = new System.Windows.Forms.CheckBox();
-            this.trixieStatusLabel = new System.Windows.Forms.Label();
-            this.trixieStatus = new System.Windows.Forms.Label();
-            this.royalCaninSectionBox = new System.Windows.Forms.GroupBox();
-            this.royalCaninListBox = new System.Windows.Forms.ListBox();
-            this.royalCaninStopButton = new System.Windows.Forms.Button();
-            this.royalCaninStartBtn = new System.Windows.Forms.Button();
-            this.royalCaninCheckbox = new System.Windows.Forms.CheckBox();
-            this.royalCaninStatusLabel = new System.Windows.Forms.Label();
-            this.royalCaninStatus = new System.Windows.Forms.Label();
+            this.bitibaBox = new System.Windows.Forms.GroupBox();
+            this.bitibaListBox = new System.Windows.Forms.ListBox();
+            this.bitibaStopBtn = new System.Windows.Forms.Button();
+            this.bitibaStartBtn = new System.Windows.Forms.Button();
+            this.bitibaCheckbox = new System.Windows.Forms.CheckBox();
+            this.bitibaStatusLabel = new System.Windows.Forms.Label();
+            this.bitibaStatus = new System.Windows.Forms.Label();
+            this.arkenZooSectionBox = new System.Windows.Forms.GroupBox();
+            this.arkenZooListBox = new System.Windows.Forms.ListBox();
+            this.arkenZooStopButton = new System.Windows.Forms.Button();
+            this.arkenZooStartBtn = new System.Windows.Forms.Button();
+            this.arkenZooCheckbox = new System.Windows.Forms.CheckBox();
+            this.arkenZooStatusLabel = new System.Windows.Forms.Label();
+            this.arkenZooStatus = new System.Windows.Forms.Label();
             this.storageSectionBox = new System.Windows.Forms.GroupBox();
             this.lblItemsProduced = new System.Windows.Forms.Label();
             this.progressItems = new System.Windows.Forms.ProgressBar();
@@ -76,16 +76,16 @@ namespace Assignment3
             this.producerSectionBox.SuspendLayout();
             this.consumerSectionBox.SuspendLayout();
             this.vetZooBox.SuspendLayout();
-            this.trixieBox.SuspendLayout();
-            this.royalCaninSectionBox.SuspendLayout();
+            this.bitibaBox.SuspendLayout();
+            this.arkenZooSectionBox.SuspendLayout();
             this.storageSectionBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // producerSectionBox
             // 
-            this.producerSectionBox.Controls.Add(this.bOSCHBox);
-            this.producerSectionBox.Controls.Add(this.razerBox);
-            this.producerSectionBox.Controls.Add(this.lantmannenBox);
+            this.producerSectionBox.Controls.Add(this.hurttaBox);
+            this.producerSectionBox.Controls.Add(this.trixieBox);
+            this.producerSectionBox.Controls.Add(this.royalCaninnBox);
             this.producerSectionBox.Location = new System.Drawing.Point(17, 16);
             this.producerSectionBox.Margin = new System.Windows.Forms.Padding(4);
             this.producerSectionBox.Name = "producerSectionBox";
@@ -97,188 +97,188 @@ namespace Assignment3
 
             // bOSCHBox
             // 
-            this.bOSCHBox.Controls.Add(this.bOSCHStopBtn);
-            this.bOSCHBox.Controls.Add(this.bOSCHStartBtn);
-            this.bOSCHBox.Controls.Add(this.bOSCHStatus);
-            this.bOSCHBox.Controls.Add(this.bOSCHStatusLabel);
-            this.bOSCHBox.Location = new System.Drawing.Point(8, 322);
-            this.bOSCHBox.Margin = new System.Windows.Forms.Padding(4);
-            this.bOSCHBox.Name = "bOSCHBox";
-            this.bOSCHBox.Padding = new System.Windows.Forms.Padding(4);
-            this.bOSCHBox.Size = new System.Drawing.Size(289, 123);
-            this.bOSCHBox.TabIndex = 2;
-            this.bOSCHBox.TabStop = false;
-            this.bOSCHBox.Text = "BOSCH";
+            this.hurttaBox.Controls.Add(this.hurttaStopBtn);
+            this.hurttaBox.Controls.Add(this.hurttaStartBtn);
+            this.hurttaBox.Controls.Add(this.hurttaStatus);
+            this.hurttaBox.Controls.Add(this.hurttaStatusLabel);
+            this.hurttaBox.Location = new System.Drawing.Point(8, 322);
+            this.hurttaBox.Margin = new System.Windows.Forms.Padding(4);
+            this.hurttaBox.Name = "hurttaBox";
+            this.hurttaBox.Padding = new System.Windows.Forms.Padding(4);
+            this.hurttaBox.Size = new System.Drawing.Size(289, 123);
+            this.hurttaBox.TabIndex = 2;
+            this.hurttaBox.TabStop = false;
+            this.hurttaBox.Text = "Hurtta";
             // 
             // bOSCHStopBtn
             // 
-            this.bOSCHStopBtn.Enabled = false;
-            this.bOSCHStopBtn.Location = new System.Drawing.Point(199, 73);
-            this.bOSCHStopBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.bOSCHStopBtn.Name = "bOSCHStopBtn";
-            this.bOSCHStopBtn.Size = new System.Drawing.Size(64, 28);
-            this.bOSCHStopBtn.TabIndex = 3;
-            this.bOSCHStopBtn.Text = "Stop";
-            this.bOSCHStopBtn.UseVisualStyleBackColor = true;
-            this.bOSCHStopBtn.Click += new System.EventHandler(this.BOSCHStopBtn_Click);
+            this.hurttaStopBtn.Enabled = false;
+            this.hurttaStopBtn.Location = new System.Drawing.Point(199, 73);
+            this.hurttaStopBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.hurttaStopBtn.Name = "hurttaStopBtn";
+            this.hurttaStopBtn.Size = new System.Drawing.Size(64, 28);
+            this.hurttaStopBtn.TabIndex = 3;
+            this.hurttaStopBtn.Text = "Stop";
+            this.hurttaStopBtn.UseVisualStyleBackColor = true;
+            this.hurttaStopBtn.Click += new System.EventHandler(this.HurttaStopBtn_Click);
             // 
             // bOSCHStartBtn
             // 
-            this.bOSCHStartBtn.Enabled = false;
-            this.bOSCHStartBtn.Location = new System.Drawing.Point(39, 73);
-            this.bOSCHStartBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.bOSCHStartBtn.Name = "bOSCHStartBtn";
-            this.bOSCHStartBtn.Size = new System.Drawing.Size(132, 28);
-            this.bOSCHStartBtn.TabIndex = 2;
-            this.bOSCHStartBtn.Text = "Start Producing";
-            this.bOSCHStartBtn.UseVisualStyleBackColor = true;
-            this.bOSCHStartBtn.Click += new System.EventHandler(this.BOSCHStartBtn_Click);
+            this.hurttaStartBtn.Enabled = false;
+            this.hurttaStartBtn.Location = new System.Drawing.Point(39, 73);
+            this.hurttaStartBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.hurttaStartBtn.Name = "hurttaStartBtn";
+            this.hurttaStartBtn.Size = new System.Drawing.Size(132, 28);
+            this.hurttaStartBtn.TabIndex = 2;
+            this.hurttaStartBtn.Text = "Start Producing";
+            this.hurttaStartBtn.UseVisualStyleBackColor = true;
+            this.hurttaStartBtn.Click += new System.EventHandler(this.HurttaStartBtn_Click);
             // 
             // bOSCHStatus
             // 
-            this.bOSCHStatus.AutoSize = true;
-            this.bOSCHStatus.Location = new System.Drawing.Point(107, 38);
-            this.bOSCHStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bOSCHStatus.Name = "bOSCHStatus";
-            this.bOSCHStatus.Size = new System.Drawing.Size(120, 16);
-            this.bOSCHStatus.TabIndex = 1;
-            this.bOSCHStatus.Text = "NOT PRODUCING";
+            this.hurttaStatus.AutoSize = true;
+            this.hurttaStatus.Location = new System.Drawing.Point(107, 38);
+            this.hurttaStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.hurttaStatus.Name = "hurttaStatus";
+            this.hurttaStatus.Size = new System.Drawing.Size(120, 16);
+            this.hurttaStatus.TabIndex = 1;
+            this.hurttaStatus.Text = "NOT PRODUCING";
             // 
             // bOSCHStatusLabel
             // 
-            this.bOSCHStatusLabel.AutoSize = true;
-            this.bOSCHStatusLabel.Location = new System.Drawing.Point(57, 38);
-            this.bOSCHStatusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bOSCHStatusLabel.Name = "bOSCHStatusLabel";
-            this.bOSCHStatusLabel.Size = new System.Drawing.Size(47, 16);
-            this.bOSCHStatusLabel.TabIndex = 0;
-            this.bOSCHStatusLabel.Text = "Status:";
+            this.hurttaStatusLabel.AutoSize = true;
+            this.hurttaStatusLabel.Location = new System.Drawing.Point(57, 38);
+            this.hurttaStatusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.hurttaStatusLabel.Name = "hurttaStatusLabel";
+            this.hurttaStatusLabel.Size = new System.Drawing.Size(47, 16);
+            this.hurttaStatusLabel.TabIndex = 0;
+            this.hurttaStatusLabel.Text = "Status:";
             // 
             // razerBox
             // 
-            this.razerBox.Controls.Add(this.razerStopBtn);
-            this.razerBox.Controls.Add(this.razerStartBtn);
-            this.razerBox.Controls.Add(this.razerStatus);
-            this.razerBox.Controls.Add(this.razerStatusLabel);
-            this.razerBox.Location = new System.Drawing.Point(8, 171);
-            this.razerBox.Margin = new System.Windows.Forms.Padding(4);
-            this.razerBox.Name = "razerBox";
-            this.razerBox.Padding = new System.Windows.Forms.Padding(4);
-            this.razerBox.Size = new System.Drawing.Size(289, 123);
-            this.razerBox.TabIndex = 1;
-            this.razerBox.TabStop = false;
-            this.razerBox.Text = "Razer";
+            this.trixieBox.Controls.Add(this.trixieStopBtn);
+            this.trixieBox.Controls.Add(this.trixieStartBtn);
+            this.trixieBox.Controls.Add(this.trixieStatus);
+            this.trixieBox.Controls.Add(this.trixieStatusLabel);
+            this.trixieBox.Location = new System.Drawing.Point(8, 171);
+            this.trixieBox.Margin = new System.Windows.Forms.Padding(4);
+            this.trixieBox.Name = "trixieBox";
+            this.trixieBox.Padding = new System.Windows.Forms.Padding(4);
+            this.trixieBox.Size = new System.Drawing.Size(289, 123);
+            this.trixieBox.TabIndex = 1;
+            this.trixieBox.TabStop = false;
+            this.trixieBox.Text = "Trixie";
             // 
             // razerStopBtn
             // 
-            this.razerStopBtn.Enabled = false;
-            this.razerStopBtn.Location = new System.Drawing.Point(199, 73);
-            this.razerStopBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.razerStopBtn.Name = "razerStopBtn";
-            this.razerStopBtn.Size = new System.Drawing.Size(64, 28);
-            this.razerStopBtn.TabIndex = 3;
-            this.razerStopBtn.Text = "Stop";
-            this.razerStopBtn.UseVisualStyleBackColor = true;
-            this.razerStopBtn.Click += new System.EventHandler(this.RazerStopBtn_Click);
+            this.trixieStopBtn.Enabled = false;
+            this.trixieStopBtn.Location = new System.Drawing.Point(199, 73);
+            this.trixieStopBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.trixieStopBtn.Name = "trixieStopBtn";
+            this.trixieStopBtn.Size = new System.Drawing.Size(64, 28);
+            this.trixieStopBtn.TabIndex = 3;
+            this.trixieStopBtn.Text = "Stop";
+            this.trixieStopBtn.UseVisualStyleBackColor = true;
+            this.trixieStopBtn.Click += new System.EventHandler(this.trixieStopBtn_Click);
             // 
             // razerStartBtn
             // 
-            this.razerStartBtn.Enabled = false;
-            this.razerStartBtn.Location = new System.Drawing.Point(39, 73);
-            this.razerStartBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.razerStartBtn.Name = "razerStartBtn";
-            this.razerStartBtn.Size = new System.Drawing.Size(132, 28);
-            this.razerStartBtn.TabIndex = 2;
-            this.razerStartBtn.Text = "Start Producing";
-            this.razerStartBtn.UseVisualStyleBackColor = true;
-            this.razerStartBtn.Click += new System.EventHandler(this.RazerStartBtn_Click);
+            this.trixieStartBtn.Enabled = false;
+            this.trixieStartBtn.Location = new System.Drawing.Point(39, 73);
+            this.trixieStartBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.trixieStartBtn.Name = "trixieStartBtn";
+            this.trixieStartBtn.Size = new System.Drawing.Size(132, 28);
+            this.trixieStartBtn.TabIndex = 2;
+            this.trixieStartBtn.Text = "Start Producing";
+            this.trixieStartBtn.UseVisualStyleBackColor = true;
+            this.trixieStartBtn.Click += new System.EventHandler(this.trixieStartBtn_Click);
             // 
             // razerStatus
             // 
-            this.razerStatus.AutoSize = true;
-            this.razerStatus.Location = new System.Drawing.Point(107, 38);
-            this.razerStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.razerStatus.Name = "razerStatus";
-            this.razerStatus.Size = new System.Drawing.Size(120, 16);
-            this.razerStatus.TabIndex = 1;
-            this.razerStatus.Text = "NOT PRODUCING";
+            this.trixieStatus.AutoSize = true;
+            this.trixieStatus.Location = new System.Drawing.Point(107, 38);
+            this.trixieStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.trixieStatus.Name = "trixieStatus";
+            this.trixieStatus.Size = new System.Drawing.Size(120, 16);
+            this.trixieStatus.TabIndex = 1;
+            this.trixieStatus.Text = "NOT PRODUCING";
             // 
             // razerStatusLabel
             // 
-            this.razerStatusLabel.AutoSize = true;
-            this.razerStatusLabel.Location = new System.Drawing.Point(57, 38);
-            this.razerStatusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.razerStatusLabel.Name = "razerStatusLabel";
-            this.razerStatusLabel.Size = new System.Drawing.Size(47, 16);
-            this.razerStatusLabel.TabIndex = 0;
-            this.razerStatusLabel.Text = "Status:";
+            this.trixieStatusLabel.AutoSize = true;
+            this.trixieStatusLabel.Location = new System.Drawing.Point(57, 38);
+            this.trixieStatusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.trixieStatusLabel.Name = "razerStatusLabel";
+            this.trixieStatusLabel.Size = new System.Drawing.Size(47, 16);
+            this.trixieStatusLabel.TabIndex = 0;
+            this.trixieStatusLabel.Text = "Status:";
             // 
             // lantmannenBox
             // 
-            this.lantmannenBox.Controls.Add(this.lantmannenStopBtn);
-            this.lantmannenBox.Controls.Add(this.lantmannenStartBtn);
-            this.lantmannenBox.Controls.Add(this.lantmannenStatus);
-            this.lantmannenBox.Controls.Add(this.lantmannenStatusLabel);
-            this.lantmannenBox.Location = new System.Drawing.Point(8, 23);
-            this.lantmannenBox.Margin = new System.Windows.Forms.Padding(4);
-            this.lantmannenBox.Name = "lantmannenBox";
-            this.lantmannenBox.Padding = new System.Windows.Forms.Padding(4);
-            this.lantmannenBox.Size = new System.Drawing.Size(289, 123);
-            this.lantmannenBox.TabIndex = 0;
-            this.lantmannenBox.TabStop = false;
-            this.lantmannenBox.Text = "Lantmännen";
+            this.royalCaninnBox.Controls.Add(this.royalCaninStopBtn);
+            this.royalCaninnBox.Controls.Add(this.royalCaninStartBtn);
+            this.royalCaninnBox.Controls.Add(this.royalCaninStatus);
+            this.royalCaninnBox.Controls.Add(this.royalCaninStatusLabel);
+            this.royalCaninnBox.Location = new System.Drawing.Point(8, 23);
+            this.royalCaninnBox.Margin = new System.Windows.Forms.Padding(4);
+            this.royalCaninnBox.Name = "royalCaninBox";
+            this.royalCaninnBox.Padding = new System.Windows.Forms.Padding(4);
+            this.royalCaninnBox.Size = new System.Drawing.Size(289, 123);
+            this.royalCaninnBox.TabIndex = 0;
+            this.royalCaninnBox.TabStop = false;
+            this.royalCaninnBox.Text = "Royal Canin";
             // 
             // lantmannenStopBtn
             // 
-            this.lantmannenStopBtn.Enabled = false;
-            this.lantmannenStopBtn.Location = new System.Drawing.Point(199, 73);
-            this.lantmannenStopBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.lantmannenStopBtn.Name = "lantmannenStopBtn";
-            this.lantmannenStopBtn.Size = new System.Drawing.Size(64, 28);
-            this.lantmannenStopBtn.TabIndex = 3;
-            this.lantmannenStopBtn.Text = "Stop";
-            this.lantmannenStopBtn.UseVisualStyleBackColor = true;
-            this.lantmannenStopBtn.Click += new System.EventHandler(this.LantmannenStopBtn_Click);
+            this.royalCaninStopBtn.Enabled = false;
+            this.royalCaninStopBtn.Location = new System.Drawing.Point(199, 73);
+            this.royalCaninStopBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.royalCaninStopBtn.Name = "granngardenStopBtn";
+            this.royalCaninStopBtn.Size = new System.Drawing.Size(64, 28);
+            this.royalCaninStopBtn.TabIndex = 3;
+            this.royalCaninStopBtn.Text = "Stop";
+            this.royalCaninStopBtn.UseVisualStyleBackColor = true;
+            this.royalCaninStopBtn.Click += new System.EventHandler(this.RoyalCaninStopBtn_Click);
             // 
             // lantmannenStartBtn
             // 
-            this.lantmannenStartBtn.Enabled = false;
-            this.lantmannenStartBtn.Location = new System.Drawing.Point(39, 73);
-            this.lantmannenStartBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.lantmannenStartBtn.Name = "lantmannenStartBtn";
-            this.lantmannenStartBtn.Size = new System.Drawing.Size(132, 28);
-            this.lantmannenStartBtn.TabIndex = 2;
-            this.lantmannenStartBtn.Text = "Start Producing";
-            this.lantmannenStartBtn.UseVisualStyleBackColor = true;
-            this.lantmannenStartBtn.Click += new System.EventHandler(this.LantmannenStartBtn_Click);
+            this.royalCaninStartBtn.Enabled = false;
+            this.royalCaninStartBtn.Location = new System.Drawing.Point(39, 73);
+            this.royalCaninStartBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.royalCaninStartBtn.Name = "royalCaninStartBtn";
+            this.royalCaninStartBtn.Size = new System.Drawing.Size(132, 28);
+            this.royalCaninStartBtn.TabIndex = 2;
+            this.royalCaninStartBtn.Text = "Start Producing";
+            this.royalCaninStartBtn.UseVisualStyleBackColor = true;
+            this.royalCaninStartBtn.Click += new System.EventHandler(this.RoyalCaninStartBtn_Click);
             // 
             // lantmannenStatus
             // 
-            this.lantmannenStatus.AutoSize = true;
-            this.lantmannenStatus.Location = new System.Drawing.Point(107, 38);
-            this.lantmannenStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lantmannenStatus.Name = "lantmannenStatus";
-            this.lantmannenStatus.Size = new System.Drawing.Size(120, 16);
-            this.lantmannenStatus.TabIndex = 1;
-            this.lantmannenStatus.Text = "NOT PRODUCING";
+            this.royalCaninStatus.AutoSize = true;
+            this.royalCaninStatus.Location = new System.Drawing.Point(107, 38);
+            this.royalCaninStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.royalCaninStatus.Name = "royalCaninStatus";
+            this.royalCaninStatus.Size = new System.Drawing.Size(120, 16);
+            this.royalCaninStatus.TabIndex = 1;
+            this.royalCaninStatus.Text = "NOT PRODUCING";
             // 
             // lantmannenStatusLabel
             // 
-            this.lantmannenStatusLabel.AutoSize = true;
-            this.lantmannenStatusLabel.Location = new System.Drawing.Point(57, 38);
-            this.lantmannenStatusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lantmannenStatusLabel.Name = "lantmannenStatusLabel";
-            this.lantmannenStatusLabel.Size = new System.Drawing.Size(47, 16);
-            this.lantmannenStatusLabel.TabIndex = 0;
-            this.lantmannenStatusLabel.Text = "Status:";
+            this.royalCaninStatusLabel.AutoSize = true;
+            this.royalCaninStatusLabel.Location = new System.Drawing.Point(57, 38);
+            this.royalCaninStatusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.royalCaninStatusLabel.Name = "royalCaninStatusLabel";
+            this.royalCaninStatusLabel.Size = new System.Drawing.Size(47, 16);
+            this.royalCaninStatusLabel.TabIndex = 0;
+            this.royalCaninStatusLabel.Text = "Status:";
             // 
 
             // 
             // consumerSectionBox
             // 
             this.consumerSectionBox.Controls.Add(this.vetZooBox);
-            this.consumerSectionBox.Controls.Add(this.trixieBox);
-            this.consumerSectionBox.Controls.Add(this.royalCaninSectionBox);
+            this.consumerSectionBox.Controls.Add(this.bitibaBox);
+            this.consumerSectionBox.Controls.Add(this.arkenZooSectionBox);
             this.consumerSectionBox.Location = new System.Drawing.Point(355, 16);
             this.consumerSectionBox.Margin = new System.Windows.Forms.Padding(4);
             this.consumerSectionBox.Name = "consumerSectionBox";
@@ -372,167 +372,167 @@ namespace Assignment3
             // 
             // elgigantenBox
             // 
-            this.trixieBox.Controls.Add(this.trixieListBox);
-            this.trixieBox.Controls.Add(this.trixieStopBtn);
-            this.trixieBox.Controls.Add(this.trixieStartBtn);
-            this.trixieBox.Controls.Add(this.trixieCheckbox);
-            this.trixieBox.Controls.Add(this.trixieStatusLabel);
-            this.trixieBox.Controls.Add(this.trixieStatus);
-            this.trixieBox.Location = new System.Drawing.Point(25, 171);
-            this.trixieBox.Margin = new System.Windows.Forms.Padding(4);
-            this.trixieBox.Name = "trixieBox";
-            this.trixieBox.Padding = new System.Windows.Forms.Padding(4);
-            this.trixieBox.Size = new System.Drawing.Size(513, 123);
-            this.trixieBox.TabIndex = 1;
-            this.trixieBox.TabStop = false;
-            this.trixieBox.Text = "Trixie";
+            this.bitibaBox.Controls.Add(this.bitibaListBox);
+            this.bitibaBox.Controls.Add(this.bitibaStopBtn);
+            this.bitibaBox.Controls.Add(this.bitibaStartBtn);
+            this.bitibaBox.Controls.Add(this.bitibaCheckbox);
+            this.bitibaBox.Controls.Add(this.bitibaStatusLabel);
+            this.bitibaBox.Controls.Add(this.bitibaStatus);
+            this.bitibaBox.Location = new System.Drawing.Point(25, 171);
+            this.bitibaBox.Margin = new System.Windows.Forms.Padding(4);
+            this.bitibaBox.Name = "bitibaBox";
+            this.bitibaBox.Padding = new System.Windows.Forms.Padding(4);
+            this.bitibaBox.Size = new System.Drawing.Size(513, 123);
+            this.bitibaBox.TabIndex = 1;
+            this.bitibaBox.TabStop = false;
+            this.bitibaBox.Text = "Bitiba";
             // 
             // elgigantenListBox
             // 
-            this.trixieListBox.FormattingEnabled = true;
-            this.trixieListBox.ItemHeight = 16;
-            this.trixieListBox.Location = new System.Drawing.Point(208, 31);
-            this.trixieListBox.Margin = new System.Windows.Forms.Padding(4);
-            this.trixieListBox.Name = "trixieListBox";
-            this.trixieListBox.Size = new System.Drawing.Size(286, 84);
-            this.trixieListBox.TabIndex = 8;
+            this.bitibaListBox.FormattingEnabled = true;
+            this.bitibaListBox.ItemHeight = 16;
+            this.bitibaListBox.Location = new System.Drawing.Point(208, 31);
+            this.bitibaListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.bitibaListBox.Name = "bitibaListBox";
+            this.bitibaListBox.Size = new System.Drawing.Size(286, 84);
+            this.bitibaListBox.TabIndex = 8;
             // 
             // elgigantenStopBtn
             // 
-            this.trixieStopBtn.Enabled = false;
-            this.trixieStopBtn.Location = new System.Drawing.Point(138, 87);
-            this.trixieStopBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.trixieStopBtn.Name = "trixieStopBtn";
-            this.trixieStopBtn.Size = new System.Drawing.Size(53, 28);
-            this.trixieStopBtn.TabIndex = 7;
-            this.trixieStopBtn.Text = "Stop";
-            this.trixieStopBtn.UseVisualStyleBackColor = true;
-            this.trixieStopBtn.Click += new System.EventHandler(this.TrixieStopBtn_Click);
+            this.bitibaStopBtn.Enabled = false;
+            this.bitibaStopBtn.Location = new System.Drawing.Point(138, 87);
+            this.bitibaStopBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.bitibaStopBtn.Name = "bitibaStopBtn";
+            this.bitibaStopBtn.Size = new System.Drawing.Size(53, 28);
+            this.bitibaStopBtn.TabIndex = 7;
+            this.bitibaStopBtn.Text = "Stop";
+            this.bitibaStopBtn.UseVisualStyleBackColor = true;
+            this.bitibaStopBtn.Click += new System.EventHandler(this.BitibaStopBtn_Click);
             // 
             // elgigantenStartBtn
             // 
-            this.trixieStartBtn.Enabled = false;
-            this.trixieStartBtn.Location = new System.Drawing.Point(20, 87);
-            this.trixieStartBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.trixieStartBtn.Name = "trixieStartBtn";
-            this.trixieStartBtn.Size = new System.Drawing.Size(108, 28);
-            this.trixieStartBtn.TabIndex = 6;
-            this.trixieStartBtn.Text = "Start Loading";
-            this.trixieStartBtn.UseVisualStyleBackColor = true;
-            this.trixieStartBtn.Click += new System.EventHandler(this.TrixieStartBtn_Click);
+            this.bitibaStartBtn.Enabled = false;
+            this.bitibaStartBtn.Location = new System.Drawing.Point(20, 87);
+            this.bitibaStartBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.bitibaStartBtn.Name = "bitibaStartBtn";
+            this.bitibaStartBtn.Size = new System.Drawing.Size(108, 28);
+            this.bitibaStartBtn.TabIndex = 6;
+            this.bitibaStartBtn.Text = "Start Loading";
+            this.bitibaStartBtn.UseVisualStyleBackColor = true;
+            this.bitibaStartBtn.Click += new System.EventHandler(this.BitibaStartBtn_Click);
             // 
             // elgigantenCheckbox
             // 
-            this.trixieCheckbox.AutoSize = true;
-            this.trixieCheckbox.Location = new System.Drawing.Point(20, 56);
-            this.trixieCheckbox.Margin = new System.Windows.Forms.Padding(4);
-            this.trixieCheckbox.Name = "trixieCheckbox";
-            this.trixieCheckbox.Size = new System.Drawing.Size(111, 20);
-            this.trixieCheckbox.TabIndex = 5;
-            this.trixieCheckbox.Text = "Continue load";
-            this.trixieCheckbox.UseVisualStyleBackColor = true;
+            this.bitibaCheckbox.AutoSize = true;
+            this.bitibaCheckbox.Location = new System.Drawing.Point(20, 56);
+            this.bitibaCheckbox.Margin = new System.Windows.Forms.Padding(4);
+            this.bitibaCheckbox.Name = "bitibaCheckbox";
+            this.bitibaCheckbox.Size = new System.Drawing.Size(111, 20);
+            this.bitibaCheckbox.TabIndex = 5;
+            this.bitibaCheckbox.Text = "Continue load";
+            this.bitibaCheckbox.UseVisualStyleBackColor = true;
             // 
             // elgigantenStatusLabel
             // 
-            this.trixieStatusLabel.AutoSize = true;
-            this.trixieStatusLabel.Location = new System.Drawing.Point(9, 28);
-            this.trixieStatusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.trixieStatusLabel.Name = "trixieStatusLabel";
-            this.trixieStatusLabel.Size = new System.Drawing.Size(47, 16);
-            this.trixieStatusLabel.TabIndex = 4;
-            this.trixieStatusLabel.Text = "Status:";
+            this.bitibaStatusLabel.AutoSize = true;
+            this.bitibaStatusLabel.Location = new System.Drawing.Point(9, 28);
+            this.bitibaStatusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bitibaStatusLabel.Name = "bitibaStatusLabel";
+            this.bitibaStatusLabel.Size = new System.Drawing.Size(47, 16);
+            this.bitibaStatusLabel.TabIndex = 4;
+            this.bitibaStatusLabel.Text = "Status:";
             // 
             // elgigantenStatus
             // 
-            this.trixieStatus.AutoSize = true;
-            this.trixieStatus.Location = new System.Drawing.Point(58, 28);
-            this.trixieStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.trixieStatus.Name = "trixieStatus";
-            this.trixieStatus.Size = new System.Drawing.Size(121, 16);
-            this.trixieStatus.TabIndex = 3;
-            this.trixieStatus.Text = "NOT CONSUMING";
+            this.bitibaStatus.AutoSize = true;
+            this.bitibaStatus.Location = new System.Drawing.Point(58, 28);
+            this.bitibaStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bitibaStatus.Name = "bitibaStatus";
+            this.bitibaStatus.Size = new System.Drawing.Size(121, 16);
+            this.bitibaStatus.TabIndex = 3;
+            this.bitibaStatus.Text = "NOT CONSUMING";
             // 
             // icaSectionBox
             // 
-            this.royalCaninSectionBox.Controls.Add(this.royalCaninListBox);
-            this.royalCaninSectionBox.Controls.Add(this.royalCaninStopButton);
-            this.royalCaninSectionBox.Controls.Add(this.royalCaninStartBtn);
-            this.royalCaninSectionBox.Controls.Add(this.royalCaninCheckbox);
-            this.royalCaninSectionBox.Controls.Add(this.royalCaninStatusLabel);
-            this.royalCaninSectionBox.Controls.Add(this.royalCaninStatus);
-            this.royalCaninSectionBox.Location = new System.Drawing.Point(25, 23);
-            this.royalCaninSectionBox.Margin = new System.Windows.Forms.Padding(4);
-            this.royalCaninSectionBox.Name = "royalCaninSectionBox";
-            this.royalCaninSectionBox.Padding = new System.Windows.Forms.Padding(4);
-            this.royalCaninSectionBox.Size = new System.Drawing.Size(513, 123);
-            this.royalCaninSectionBox.TabIndex = 0;
-            this.royalCaninSectionBox.TabStop = false;
-            this.royalCaninSectionBox.Text = "Royal Canin";
+            this.arkenZooSectionBox.Controls.Add(this.arkenZooListBox);
+            this.arkenZooSectionBox.Controls.Add(this.arkenZooStopButton);
+            this.arkenZooSectionBox.Controls.Add(this.arkenZooStartBtn);
+            this.arkenZooSectionBox.Controls.Add(this.arkenZooCheckbox);
+            this.arkenZooSectionBox.Controls.Add(this.arkenZooStatusLabel);
+            this.arkenZooSectionBox.Controls.Add(this.arkenZooStatus);
+            this.arkenZooSectionBox.Location = new System.Drawing.Point(25, 23);
+            this.arkenZooSectionBox.Margin = new System.Windows.Forms.Padding(4);
+            this.arkenZooSectionBox.Name = "arkenZooSectionBox";
+            this.arkenZooSectionBox.Padding = new System.Windows.Forms.Padding(4);
+            this.arkenZooSectionBox.Size = new System.Drawing.Size(513, 123);
+            this.arkenZooSectionBox.TabIndex = 0;
+            this.arkenZooSectionBox.TabStop = false;
+            this.arkenZooSectionBox.Text = "Arken Zoo";
             // 
             // icaListBox
             // 
-            this.royalCaninListBox.FormattingEnabled = true;
-            this.royalCaninListBox.ItemHeight = 16;
-            this.royalCaninListBox.Location = new System.Drawing.Point(208, 23);
-            this.royalCaninListBox.Margin = new System.Windows.Forms.Padding(4);
-            this.royalCaninListBox.Name = "royalCaninListBox";
-            this.royalCaninListBox.Size = new System.Drawing.Size(286, 84);
-            this.royalCaninListBox.TabIndex = 8;
+            this.arkenZooListBox.FormattingEnabled = true;
+            this.arkenZooListBox.ItemHeight = 16;
+            this.arkenZooListBox.Location = new System.Drawing.Point(208, 23);
+            this.arkenZooListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.arkenZooListBox.Name = "arkenZooListBox";
+            this.arkenZooListBox.Size = new System.Drawing.Size(286, 84);
+            this.arkenZooListBox.TabIndex = 8;
             // 
             // icaStopButton
             // 
-            this.royalCaninStopButton.Enabled = false;
-            this.royalCaninStopButton.Location = new System.Drawing.Point(138, 78);
-            this.royalCaninStopButton.Margin = new System.Windows.Forms.Padding(4);
-            this.royalCaninStopButton.Name = "royalCaninStopButton";
-            this.royalCaninStopButton.Size = new System.Drawing.Size(53, 28);
-            this.royalCaninStopButton.TabIndex = 7;
-            this.royalCaninStopButton.Text = "Stop";
-            this.royalCaninStopButton.UseVisualStyleBackColor = true;
-            this.royalCaninStopButton.Click += new System.EventHandler(this.RoyalCaninStopBtn_Click);
+            this.arkenZooStopButton.Enabled = false;
+            this.arkenZooStopButton.Location = new System.Drawing.Point(138, 78);
+            this.arkenZooStopButton.Margin = new System.Windows.Forms.Padding(4);
+            this.arkenZooStopButton.Name = "arkenZooStopButton";
+            this.arkenZooStopButton.Size = new System.Drawing.Size(53, 28);
+            this.arkenZooStopButton.TabIndex = 7;
+            this.arkenZooStopButton.Text = "Stop";
+            this.arkenZooStopButton.UseVisualStyleBackColor = true;
+            this.arkenZooStopButton.Click += new System.EventHandler(this.ArkenZooStopBtn_Click);
             // 
             // icaStartBtn
             // 
-            this.royalCaninStartBtn.Enabled = false;
-            this.royalCaninStartBtn.Location = new System.Drawing.Point(20, 78);
-            this.royalCaninStartBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.royalCaninStartBtn.Name = "royalCaninStartBtn";
-            this.royalCaninStartBtn.Size = new System.Drawing.Size(108, 28);
-            this.royalCaninStartBtn.TabIndex = 6;
-            this.royalCaninStartBtn.Text = "Start Loading";
-            this.royalCaninStartBtn.UseVisualStyleBackColor = true;
-            this.royalCaninStartBtn.Click += new System.EventHandler(this.RoyalCaninStartBtn_Click);
+            this.arkenZooStartBtn.Enabled = false;
+            this.arkenZooStartBtn.Location = new System.Drawing.Point(20, 78);
+            this.arkenZooStartBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.arkenZooStartBtn.Name = "arkenZooStartBtn";
+            this.arkenZooStartBtn.Size = new System.Drawing.Size(108, 28);
+            this.arkenZooStartBtn.TabIndex = 6;
+            this.arkenZooStartBtn.Text = "Start Loading";
+            this.arkenZooStartBtn.UseVisualStyleBackColor = true;
+            this.arkenZooStartBtn.Click += new System.EventHandler(this.ArkenZooStartBtn_Click);
             // 
             // icaCheckbox
             // 
-            this.royalCaninCheckbox.AutoSize = true;
-            this.royalCaninCheckbox.Location = new System.Drawing.Point(20, 47);
-            this.royalCaninCheckbox.Margin = new System.Windows.Forms.Padding(4);
-            this.royalCaninCheckbox.Name = "royalCaninCheckbox";
-            this.royalCaninCheckbox.Size = new System.Drawing.Size(111, 20);
-            this.royalCaninCheckbox.TabIndex = 5;
-            this.royalCaninCheckbox.Text = "Continue load";
-            this.royalCaninCheckbox.UseVisualStyleBackColor = true;
+            this.arkenZooCheckbox.AutoSize = true;
+            this.arkenZooCheckbox.Location = new System.Drawing.Point(20, 47);
+            this.arkenZooCheckbox.Margin = new System.Windows.Forms.Padding(4);
+            this.arkenZooCheckbox.Name = "arkenZooCheckbox";
+            this.arkenZooCheckbox.Size = new System.Drawing.Size(111, 20);
+            this.arkenZooCheckbox.TabIndex = 5;
+            this.arkenZooCheckbox.Text = "Continue load";
+            this.arkenZooCheckbox.UseVisualStyleBackColor = true;
             // 
             // icaStatusLabel
             // 
-            this.royalCaninStatusLabel.AutoSize = true;
-            this.royalCaninStatusLabel.Location = new System.Drawing.Point(9, 19);
-            this.royalCaninStatusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.royalCaninStatusLabel.Name = "royalCaninStatusLabel";
-            this.royalCaninStatusLabel.Size = new System.Drawing.Size(47, 16);
-            this.royalCaninStatusLabel.TabIndex = 4;
-            this.royalCaninStatusLabel.Text = "Status:";
+            this.arkenZooStatusLabel.AutoSize = true;
+            this.arkenZooStatusLabel.Location = new System.Drawing.Point(9, 19);
+            this.arkenZooStatusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.arkenZooStatusLabel.Name = "arkenZooStatusLabel";
+            this.arkenZooStatusLabel.Size = new System.Drawing.Size(47, 16);
+            this.arkenZooStatusLabel.TabIndex = 4;
+            this.arkenZooStatusLabel.Text = "Status:";
             // 
             // icaStatus
             // 
-            this.royalCaninStatus.AutoSize = true;
-            this.royalCaninStatus.Location = new System.Drawing.Point(58, 19);
-            this.royalCaninStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.royalCaninStatus.Name = "royalCaninStatus";
-            this.royalCaninStatus.Size = new System.Drawing.Size(121, 16);
-            this.royalCaninStatus.TabIndex = 3;
-            this.royalCaninStatus.Text = "NOT CONSUMING";
+            this.arkenZooStatus.AutoSize = true;
+            this.arkenZooStatus.Location = new System.Drawing.Point(58, 19);
+            this.arkenZooStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.arkenZooStatus.Name = "arkenZooStatus";
+            this.arkenZooStatus.Size = new System.Drawing.Size(121, 16);
+            this.arkenZooStatus.TabIndex = 3;
+            this.arkenZooStatus.Text = "NOT CONSUMING";
             // 
             // storageSectionBox
             // 
@@ -606,10 +606,10 @@ namespace Assignment3
             this.consumerSectionBox.ResumeLayout(false);
             this.vetZooBox.ResumeLayout(false);
             this.vetZooBox.PerformLayout();
-            this.trixieBox.ResumeLayout(false);
-            this.trixieBox.PerformLayout();
-            this.royalCaninSectionBox.ResumeLayout(false);
-            this.royalCaninSectionBox.PerformLayout();
+            this.bitibaBox.ResumeLayout(false);
+            this.bitibaBox.PerformLayout();
+            this.arkenZooSectionBox.ResumeLayout(false);
+            this.arkenZooSectionBox.PerformLayout();
             this.storageSectionBox.ResumeLayout(false);
             this.storageSectionBox.PerformLayout();
             this.ResumeLayout(false);
@@ -623,28 +623,28 @@ namespace Assignment3
         private System.Windows.Forms.GroupBox storageSectionBox;
         private System.Windows.Forms.ProgressBar progressItems;
         private System.Windows.Forms.Label maxCapacityLabel;
-        private System.Windows.Forms.GroupBox lantmannenBox;
-        private System.Windows.Forms.Button lantmannenStopBtn;
-        private System.Windows.Forms.Button lantmannenStartBtn;
-        private System.Windows.Forms.Label lantmannenStatusLabel;
-        private System.Windows.Forms.Label lantmannenStatus;
-        private System.Windows.Forms.GroupBox bOSCHBox;
-        private System.Windows.Forms.Button bOSCHStopBtn;
-        private System.Windows.Forms.Button bOSCHStartBtn;
-        private System.Windows.Forms.Label bOSCHStatus;
-        private System.Windows.Forms.Label bOSCHStatusLabel;
-        private System.Windows.Forms.GroupBox razerBox;
-        private System.Windows.Forms.Button razerStopBtn;
-        private System.Windows.Forms.Button razerStartBtn;
-        private System.Windows.Forms.Label razerStatus;
-        private System.Windows.Forms.Label razerStatusLabel;
-        private System.Windows.Forms.GroupBox royalCaninSectionBox;
-        private System.Windows.Forms.ListBox royalCaninListBox;
-        private System.Windows.Forms.Button royalCaninStopButton;
+        private System.Windows.Forms.GroupBox royalCaninnBox;
+        private System.Windows.Forms.Button royalCaninStopBtn;
         private System.Windows.Forms.Button royalCaninStartBtn;
-        private System.Windows.Forms.CheckBox royalCaninCheckbox;
         private System.Windows.Forms.Label royalCaninStatusLabel;
         private System.Windows.Forms.Label royalCaninStatus;
+        private System.Windows.Forms.GroupBox hurttaBox;
+        private System.Windows.Forms.Button hurttaStopBtn;
+        private System.Windows.Forms.Button hurttaStartBtn;
+        private System.Windows.Forms.Label hurttaStatus;
+        private System.Windows.Forms.Label hurttaStatusLabel;
+        private System.Windows.Forms.GroupBox trixieBox;
+        private System.Windows.Forms.Button trixieStopBtn;
+        private System.Windows.Forms.Button trixieStartBtn;
+        private System.Windows.Forms.Label trixieStatus;
+        private System.Windows.Forms.Label trixieStatusLabel;
+        private System.Windows.Forms.GroupBox arkenZooSectionBox;
+        private System.Windows.Forms.ListBox arkenZooListBox;
+        private System.Windows.Forms.Button arkenZooStopButton;
+        private System.Windows.Forms.Button arkenZooStartBtn;
+        private System.Windows.Forms.CheckBox arkenZooCheckbox;
+        private System.Windows.Forms.Label arkenZooStatusLabel;
+        private System.Windows.Forms.Label arkenZooStatus;
         private System.Windows.Forms.GroupBox vetZooBox;
         private System.Windows.Forms.ListBox vetZooListbox;
         private System.Windows.Forms.Button vetZooStopBtn;
@@ -652,13 +652,13 @@ namespace Assignment3
         private System.Windows.Forms.CheckBox vetZooCheckbox;
         private System.Windows.Forms.Label vetZooStatusLabel;
         private System.Windows.Forms.Label vetZooStatus;
-        private System.Windows.Forms.GroupBox trixieBox;
-        private System.Windows.Forms.ListBox trixieListBox;
-        private System.Windows.Forms.Button trixieStopBtn;
-        private System.Windows.Forms.Button trixieStartBtn;
-        private System.Windows.Forms.CheckBox trixieCheckbox;
-        private System.Windows.Forms.Label trixieStatusLabel;
-        private System.Windows.Forms.Label trixieStatus;
+        private System.Windows.Forms.GroupBox bitibaBox;
+        private System.Windows.Forms.ListBox bitibaListBox;
+        private System.Windows.Forms.Button bitibaStopBtn;
+        private System.Windows.Forms.Button bitibaStartBtn;
+        private System.Windows.Forms.CheckBox bitibaCheckbox;
+        private System.Windows.Forms.Label bitibaStatusLabel;
+        private System.Windows.Forms.Label bitibaStatus;
         private System.Windows.Forms.Label lblItemsProduced;
         private System.Windows.Forms.Button startBtn;
 
@@ -668,28 +668,28 @@ namespace Assignment3
         public GroupBox StorageSectionBox { get { return storageSectionBox; } set { storageSectionBox = value; } }
         public ProgressBar ProgressItems { get { return progressItems; } set { progressItems = value; } }
         public Label MaxCapacityLabel { get { return maxCapacityLabel; } set { maxCapacityLabel = value; } }
-        public GroupBox LantmannenBox { get { return lantmannenBox; } set { lantmannenBox = value; } }
-        public Button LantmannenStopBtn { get { return lantmannenStopBtn; } set { lantmannenStopBtn = value; } }
-        public Button LantmannenStartBtn { get { return lantmannenStartBtn; } set { lantmannenStartBtn = value; } }
-        public Label LantmannenStatusLabel { get { return lantmannenStatusLabel; } set { lantmannenStatusLabel = value; } }
-        public Label LantmannenStatus { get { return lantmannenStatus; } set { lantmannenStatus = value; } }
-        public GroupBox BOSCHBox { get { return bOSCHBox; } set { bOSCHBox = value; } }
-        public Button BOSCHStopBtn { get { return bOSCHStopBtn; } set { bOSCHStopBtn = value; } }
-        public Button BOSCHStartBtn { get { return bOSCHStartBtn; } set { bOSCHStartBtn = value; } }
-        public Label BOSCHStatus { get { return bOSCHStatus; } set { bOSCHStatus = value; } }
-        public Label BOSCHStatusLabel { get { return bOSCHStatusLabel; } set { bOSCHStatusLabel = value; } }
-        public GroupBox RazerBox { get { return razerBox; } set { razerBox = value; } }
-        public Button RazerStopBtn { get { return razerStopBtn; } set { razerStopBtn = value; } }
-        public Button RazerStartBtn { get { return razerStartBtn; } set { razerStartBtn = value; } }
-        public Label RazerStatus { get { return razerStatus; } set { razerStatus = value; } }
-        public Label RazerStatusLabel { get { return razerStatusLabel; } set { razerStatusLabel = value; } }
-        public GroupBox RoyalCaninSectionBox { get { return royalCaninSectionBox; } set { royalCaninSectionBox = value; } }
-        public ListBox RoyalCaninListBox { get { return royalCaninListBox; } set { royalCaninListBox = value; } }
-        public Button RoyalCaninStopButton { get { return royalCaninStopButton; } set { royalCaninStopButton = value; } }
+        public GroupBox RoyalCaninBox { get { return royalCaninnBox; } set { royalCaninnBox = value; } }
+        public Button RoyalCaninStopBtn { get { return royalCaninStopBtn; } set { royalCaninStopBtn = value; } }
         public Button RoyalCaninStartBtn { get { return royalCaninStartBtn; } set { royalCaninStartBtn = value; } }
-        public CheckBox RoyalCaninCheckbox { get { return royalCaninCheckbox; } set { royalCaninCheckbox = value; } }
         public Label RoyalCaninStatusLabel { get { return royalCaninStatusLabel; } set { royalCaninStatusLabel = value; } }
         public Label RoyalCaninStatus { get { return royalCaninStatus; } set { royalCaninStatus = value; } }
+        public GroupBox HurttaBox { get { return hurttaBox; } set { hurttaBox = value; } }
+        public Button HurttaStopBtn { get { return hurttaStopBtn; } set { hurttaStopBtn = value; } }
+        public Button HurttaStartBtn { get { return hurttaStartBtn; } set { hurttaStartBtn = value; } }
+        public Label HurttaStatus { get { return hurttaStatus; } set { hurttaStatus = value; } }
+        public Label HurttaStatusLabel { get { return hurttaStatusLabel; } set { hurttaStatusLabel = value; } }
+        public GroupBox BitibaBox { get { return trixieBox; } set { trixieBox = value; } }
+        public Button TrixieStopBtn { get { return trixieStopBtn; } set { trixieStopBtn = value; } }
+        public Button TrixieStartBtn { get { return trixieStartBtn; } set { trixieStartBtn = value; } }
+        public Label TrixieStatus { get { return trixieStatus; } set { trixieStatus = value; } }
+        public Label TrixieStatusLabel { get { return trixieStatusLabel; } set { trixieStatusLabel = value; } }
+        public GroupBox ArkenZooSectionBox { get { return arkenZooSectionBox; } set { arkenZooSectionBox = value; } }
+        public ListBox ArkenZooListBox { get { return arkenZooListBox; } set { arkenZooListBox = value; } }
+        public Button ArkenZooStopButton { get { return arkenZooStopButton; } set { arkenZooStopButton = value; } }
+        public Button ArkenZooStartBtn { get { return arkenZooStartBtn; } set { arkenZooStartBtn = value; } }
+        public CheckBox ArkenZooCheckbox { get { return arkenZooCheckbox; } set { arkenZooCheckbox = value; } }
+        public Label ArkenZooStatusLabel { get { return arkenZooStatusLabel; } set { arkenZooStatusLabel = value; } }
+        public Label ArkenZooStatus { get { return arkenZooStatus; } set { arkenZooStatus = value; } }
         public GroupBox VetZooBox { get { return vetZooBox; } set { vetZooBox = value; } }
         public ListBox VetZooListbox { get { return vetZooListbox; } set { vetZooListbox = value; } }
         public Button VetZooStopBtn { get { return vetZooStopBtn; } set { vetZooStopBtn = value; } }
@@ -697,13 +697,13 @@ namespace Assignment3
         public CheckBox VetZooCheckbox { get { return vetZooCheckbox; } set { vetZooCheckbox = value; } }
         public Label VetZooStatusLabel { get { return vetZooStatusLabel; } set { vetZooStatusLabel = value; } }
         public Label VetZooStatus { get { return vetZooStatus; } set { vetZooStatus = value; } }
-        public GroupBox TrixieBox { get { return trixieBox; } set { trixieBox = value; } }
-        public ListBox TrixieListBox { get { return trixieListBox; } set { trixieListBox = value; } }
-        public Button TrixieStopBtn { get { return trixieStopBtn; } set { trixieStopBtn = value; } }
-        public Button TrixieStartBtn { get { return trixieStartBtn; } set { trixieStartBtn = value; } }
-        public CheckBox TrixieCheckbox { get { return trixieCheckbox; } set { trixieCheckbox = value; } }
-        public Label TrixieStatusLabel { get { return trixieStatusLabel; } set { trixieStatusLabel = value; } }
-        public Label TrixieStatus { get { return trixieStatus; } set { trixieStatus = value; } }
+        public GroupBox TrixieBox { get { return bitibaBox; } set { bitibaBox = value; } }
+        public ListBox BitibaListBox { get { return bitibaListBox; } set { bitibaListBox = value; } }
+        public Button BitibaStopBtn { get { return bitibaStopBtn; } set { bitibaStopBtn = value; } }
+        public Button BitibaStartBtn { get { return bitibaStartBtn; } set { bitibaStartBtn = value; } }
+        public CheckBox BitibaCheckbox { get { return bitibaCheckbox; } set { bitibaCheckbox = value; } }
+        public Label BitibaStatusLabel { get { return bitibaStatusLabel; } set { bitibaStatusLabel = value; } }
+        public Label BitibaStatus { get { return bitibaStatus; } set { bitibaStatus = value; } }
         public Label LblItemsProduced { get { return lblItemsProduced; } set { lblItemsProduced = value; } }
 
 

@@ -13,91 +13,83 @@ namespace Assignment3
     public class Consumer
     {
         Product.CategoryType consumerType;
-        Storage<Product> storage;
-        LogisticManager logisticManager;
+        LogisticsBuffer<Product> buffer;
+        LogisticManager manager;
         public List<Product> loadedProducts = new List<Product>();
         bool isRunning = true;
-        int capactity;
+        int maxCapacity;
         public bool IsRunning { get { return isRunning; } set { isRunning = value; } }
-        public int Capacity { get { return capactity; } set { capactity = value; } }
+        public int MaxCapacity { get { return maxCapacity; } set { maxCapacity = value; } }
 
-        public Consumer(Product.CategoryType consumerType, Storage<Product> storage, int capacity, LogisticManager logisticManager)
+        public Consumer(Product.CategoryType consumerType, LogisticsBuffer<Product> buffer, int maxCapacity, LogisticManager logisticManager)
         {
             this.consumerType = consumerType;
-            this.storage = storage;
-            this.capactity = capacity;
-            this.logisticManager = logisticManager;
+            this.buffer = buffer;
+            this.maxCapacity = maxCapacity;
+            this.manager = logisticManager;
         }
         public void Run()
         {
             while (isRunning)
             {
-                Consuming();
-                ResetCapacity();
+                Consume();
+                ResetMaxCapacity();
                 Thread.Sleep(1000);
             }
         }
         //Method to run the Consume method of the Storage class and add products to the Consumers list of products
-        public void Consuming()
+        public void Consume()
         {
-            if (loadedProducts.Count < capactity)
+            if (loadedProducts.Count < maxCapacity)
             {
-                Product product = storage.Consume();
+                Product product = buffer.RemoveProduct();
                 loadedProducts.Add(product);
             }
             else
             {
-                switch (consumerType)
+                if (consumerType == Product.CategoryType.Toys)
                 {
-                    case Product.CategoryType.Toys:
-                        logisticManager.mainForm.UpdateTrixieStatus(false);
-                        break;
-                    case Product.CategoryType.Food:
-                        logisticManager.mainForm.UpdateRoyalCaninStatus(false);
-                        break;
-                    case Product.CategoryType.Accessories:
-                        logisticManager.mainForm.UpdateVetZooStatus(false);
-                        break;
+                    manager.mainForm.UpdateBitibaStatus(false);
+                }
+                else if (consumerType == Product.CategoryType.Food)
+                {
+                    manager.mainForm.UpdateArkenZooStatus(false);
+                }
+                else if (consumerType == Product.CategoryType.Accessories)
+                {
+                    manager.mainForm.UpdateVetZooStatus(false);
                 }
             }
         }
-        //Method to reset capacity of a consumer to let it start loading again
-        public void ResetCapacity()
-        {
-            switch (consumerType)
-            {
-                case Product.CategoryType.Toys:
-                    if (logisticManager.mainForm.TrixieCheckbox.Checked)
-                    {
-                        if (loadedProducts.Count >= capactity)
-                        {
-                            loadedProducts.Clear();
-                        }
-                        logisticManager.mainForm.UpdateTrixieStatus(true);
-                    }
-                    break;
-                case Product.CategoryType.Food:
-                    if (logisticManager.mainForm.RoyalCaninCheckbox.Checked)
-                    {
-                        if (loadedProducts.Count >= capactity)
-                        {
-                            loadedProducts.Clear();
-                        }
-                        logisticManager.mainForm.UpdateRoyalCaninStatus(true);
-                    }
-                    break;
-                case Product.CategoryType.Accessories:
-                    if (logisticManager.mainForm.VetZooCheckbox.Checked)
-                    {
-                        if (loadedProducts.Count >= capactity)
-                        {
-                            loadedProducts.Clear();
-                        }
-                        logisticManager.mainForm.UpdateVetZooStatus(true);
-                    }
-                    break;
-            }
 
+        //Method to reset capacity of a consumer to let it start loading again
+        public void ResetMaxCapacity()
+        {
+            if (consumerType == Product.CategoryType.Toys && manager.mainForm.BitibaCheckbox.Checked)
+            {
+                if (loadedProducts.Count >= maxCapacity)
+                {
+                    loadedProducts.Clear();
+                }
+                manager.mainForm.UpdateBitibaStatus(true);
+            }
+            else if (consumerType == Product.CategoryType.Food && manager.mainForm.ArkenZooCheckbox.Checked)
+            {
+                if (loadedProducts.Count >= maxCapacity)
+                {
+                    loadedProducts.Clear();
+                }
+                manager.mainForm.UpdateArkenZooStatus(true);
+            }
+            else if (consumerType == Product.CategoryType.Accessories && manager.mainForm.VetZooCheckbox.Checked)
+            {
+                if (loadedProducts.Count >= maxCapacity)
+                {
+                    loadedProducts.Clear();
+                }
+                manager.mainForm.UpdateVetZooStatus(true);
+            }
         }
+
     }
 }
