@@ -14,12 +14,12 @@ namespace Assignment3
     public class Producer
     {
         Product.CategoryType producerType;
-        LogisticsBuffer<Product> storage;
-        LogisticManager manager;
+        Buffer<Product> storage;
+        Manager manager;
         bool isRunning = true;
         public bool IsRunning { get { return isRunning; } set { isRunning = value; } }
 
-        public Producer(Product.CategoryType producerType, LogisticsBuffer<Product> storage, LogisticManager logisticManager)
+        public Producer(Product.CategoryType producerType, Buffer<Product> storage, Manager logisticManager)
         {
             this.producerType = producerType;
             this.storage = storage;

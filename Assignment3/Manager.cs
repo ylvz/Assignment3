@@ -13,9 +13,9 @@ namespace Assignment3
     /// includes methods to update listboxes and the progressbar of the Windows Form, as well as get product information as 
     /// strings to send into the listboxes.
     /// </summary>
-    public class LogisticManager
+    public class Manager
     {
-        public LogisticsBuffer<Product> buffer { get; set; } = new LogisticsBuffer<Product>();
+        public Buffer<Product> buffer { get; set; } = new Buffer<Product>();
         public List<Product> products = new List<Product>();
         private Dictionary<Product.CategoryType, Producer> producers = new Dictionary<Product.CategoryType, Producer>();
         private Dictionary<Product.CategoryType, Consumer> consumers = new Dictionary<Product.CategoryType, Consumer>();
@@ -25,7 +25,7 @@ namespace Assignment3
         public Thread managerThread;
         private string[] testProducts;
 
-        public LogisticManager(Form1 mainForm)
+        public Manager(Form1 mainForm)
         {
             this.mainForm = mainForm;
         }

@@ -13,15 +13,15 @@ namespace Assignment3
     public class Consumer
     {
         Product.CategoryType consumerType;
-        LogisticsBuffer<Product> buffer;
-        LogisticManager manager;
+        Buffer<Product> buffer;
+        Manager manager;
         public List<Product> loadedProducts = new List<Product>();
         bool isRunning = true;
         int maxCapacity;
         public bool IsRunning { get { return isRunning; } set { isRunning = value; } }
         public int MaxCapacity { get { return maxCapacity; } set { maxCapacity = value; } }
 
-        public Consumer(Product.CategoryType consumerType, LogisticsBuffer<Product> buffer, int maxCapacity, LogisticManager logisticManager)
+        public Consumer(Product.CategoryType consumerType, Buffer<Product> buffer, int maxCapacity, Manager logisticManager)
         {
             this.consumerType = consumerType;
             this.buffer = buffer;

@@ -7,13 +7,13 @@ namespace Assignment3
 {
     public partial class Form1 : Form
     {
-        private LogisticManager logisticManager;
-        private LogisticsBuffer<Product> storage;
+        private Manager logisticManager;
+        private Buffer<Product> storage;
 
         public Form1()
         {
             InitializeComponent();
-            logisticManager = new LogisticManager(this);
+            logisticManager = new Manager(this);
             storage = logisticManager.buffer;
         }
 

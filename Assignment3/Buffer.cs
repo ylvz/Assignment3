@@ -7,7 +7,7 @@ namespace Assignment3
     /// and also remove them. Synchronisation for the system occurs in the methods of this class.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class LogisticsBuffer<T>
+    public class Buffer<T>
     {
         private T[] buffer;
         private int producerIndex; //position in the buffer where the producer produces a product
@@ -18,7 +18,7 @@ namespace Assignment3
         Semaphore filledSlots = new Semaphore(0, bufferSize);
         Semaphore emptySlots = new Semaphore(bufferSize, bufferSize);
         Mutex mutex = new Mutex();
-        public LogisticsBuffer()
+        public Buffer()
         {
             producerIndex = -1;
             consumeIndex = -1;
